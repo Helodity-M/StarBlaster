@@ -16,9 +16,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         transform.position += (Vector3)moveAction.ReadValue<Vector2>() * Time.deltaTime * MoveSpeed;
-
-
-
         ConstrainPlayer();
     }
 
@@ -31,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
             new Vector2(
                 Mathf.Clamp(transform.position.x, minBounds.x + boundsPadding, maxBounds.x - boundsPadding),
                 Mathf.Clamp(transform.position.y, minBounds.y + boundsPadding, maxBounds.y - boundsPadding)
-                );
+            );
 
     }
 }
