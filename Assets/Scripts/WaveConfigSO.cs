@@ -3,9 +3,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WaveConfigSO", menuName = "Scriptable Objects/WaveConfigSO")]
 public class WaveConfigSO : ScriptableObject
 {
-    [SerializeField] GameObject[] EnemyPrefabs;
+    [SerializeField] Pathfinding[] EnemyPrefabs;
     [SerializeField] Transform pathPrefab;
     public float enemyMoveSpeed = 5f;
+    [SerializeField] float timeBetweenEnemySpawns = 0.5f;
+    [SerializeField] float enemySpawnVariance = 0.05f;
 
     public Transform GetStartingWaypoint()
     {
@@ -26,8 +28,12 @@ public class WaveConfigSO : ScriptableObject
     {
         return EnemyPrefabs.Length;
     }
-    public GameObject GetEnemyPrefab(int idx)
+    public Pathfinding GetEnemyPrefab(int idx)
     {
         return EnemyPrefabs[idx];
+    }
+    public float GetRandomSpawnDelay()
+    {
+        return timeBetweenEnemySpawns + Random.Range(-enemySpawnVariance, enemySpawnVariance);
     }
 }

@@ -1,30 +1,38 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] WaveConfigSO currentWave;
+    [SerializeField] WaveConfigSO[] waveList;
+    [SerializeField] int currentWaveIndex;
+    [SerializeField] float timeBetweenWaveSpawns;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemies());
     }
 
 
-    void SpawnEnemies()
+    IEnumerator SpawnEnemies()
     {
-        for (int i = 0; i < currentWave.GetEnemyCount(); i++)
+        foreach (WaveConfigSO wave in waveList)
         {
-            Instantiate(
-                currentWave.GetEnemyPrefab(0),
-                currentWave.GetStartingWaypoint().position,
-                Quaternion.identity
-            );
+            for (int i = 0; i < wave.GetEnemyCount(); i++)
+            {
+                Pathfinding newPath = Instantiate(
+                    wave.GetEnemyPrefab(0),
+                    wave.GetStartingWaypoint().position,
+                    Quaternion.identity
+                );
+                newPath.SetWaveConfig(wave);
+                yield return new WaitForSeconds(wave.GetRandomSpawnDelay());
+            }
+            yield return new WaitForSeconds(timeBetweenWaveSpawns);
         }
     }
-    // Update is called once per frame
-    void Update()
+    public WaveConfigSO GetCurrentWave()
     {
-        
+        return waveList[currentWaveIndex];
     }
 }
