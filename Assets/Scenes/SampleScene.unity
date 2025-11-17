@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 1221020058}
   - component: {fileID: 1221020057}
   - component: {fileID: 1221020059}
+  - component: {fileID: 1221020060}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -606,6 +607,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1221020060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221020054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78adb01b434749442aef380c3d7ec895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
+  fireRate: 0.2
+  bulletSpeed: 8
+  BulletPrefab: {fileID: -7718283228304058340, guid: 572c8dac02c76214f89faafb561e90db, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
