@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < wave.GetEnemyCount(); i++)
                 {
                     Pathfinding newPath = Instantiate(
-                        wave.GetEnemyPrefab(0),
+                        wave.GetEnemyPrefab(i),
                         wave.GetStartingWaypoint().position,
                         Quaternion.identity
                     );

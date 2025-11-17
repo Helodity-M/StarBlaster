@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5389405659716800493, guid: 380732039fc611c4d9a17a47d273023a, type: 3}
+  m_Sprite: {fileID: 5421734538833868612, guid: dc4e03bda1837f643b2122d9108c107d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5683287154064683189}
   - component: {fileID: -4006193076150177543}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620fc1bdc7ec026428d30377ea16a67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShooting
-  fireRate: 0.3
+  fireRate: 0.02
   bulletSpeed: 5
   BulletPrefab: {fileID: -5785711071189236101, guid: 207b51a46359ddb40864257944ffd3fd, type: 3}
 --- !u!114 &-4006193076150177543
