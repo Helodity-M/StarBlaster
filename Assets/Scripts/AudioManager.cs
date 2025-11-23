@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : PersistentSingleton<AudioManager>
 {
     [Header("Shooting SFX")]
     [SerializeField] AudioClip shootClip;

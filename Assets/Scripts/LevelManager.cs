@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
     public void LoadGameplay()
     {
         SceneManager.LoadScene("SampleScene");
+        ScoreTracker.Instance.AddScore(-ScoreTracker.Instance.score);
     }
     public void LoadMainMenu()
     {

@@ -8,14 +8,10 @@ public class Health : MonoBehaviour
     [SerializeField] int scoreValue = 50;
     [SerializeField] ParticleSystem HitParticlePrefab;
     ScreenShake shakeEffect;
-    AudioManager audioPlayer;
-    ScoreTracker scoreTracker;
 
     private void Awake()
     {
         shakeEffect = Camera.main.GetComponent<ScreenShake>();
-        audioPlayer = FindAnyObjectByType<AudioManager>();
-        scoreTracker = FindAnyObjectByType<ScoreTracker>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -41,7 +37,7 @@ public class Health : MonoBehaviour
     void TakeDamage(int amt)
     {
         PlayHitParticles();
-        audioPlayer.PlayDamageSFX();
+        AudioManager.Instance.PlayDamageSFX();
         if (useShakeEffect)
         {
             shakeEffect.Play();
@@ -54,7 +50,7 @@ public class Health : MonoBehaviour
             {
                 FindFirstObjectByType<LevelManager>().LoadGameOver();
             }
-            scoreTracker.AddScore(scoreValue);
+            ScoreTracker.Instance.AddScore(scoreValue);
             Destroy(gameObject);
         }
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ScoreTracker : MonoBehaviour
+public class ScoreTracker : PersistentSingleton<ScoreTracker>
 {
     public int score { get; private set; }
 

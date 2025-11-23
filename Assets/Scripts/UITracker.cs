@@ -9,7 +9,6 @@ public class UITracker : MonoBehaviour
     [SerializeField] Slider HealthUI;
 
     [Header("Score")]
-    [SerializeField] ScoreTracker scoreTracker;
     [SerializeField] TMP_Text ScoreUI;
 
     private void Awake()
@@ -19,7 +18,7 @@ public class UITracker : MonoBehaviour
     private void Update()
     {
         HealthUI.value = playerHealth.health;
-        ScoreUI.text = $"Score:\n{scoreTracker.score}";
+        ScoreUI.text = $"Score:\n{ScoreTracker.Instance.score}";
     }
 
 

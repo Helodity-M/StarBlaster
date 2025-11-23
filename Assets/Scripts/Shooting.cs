@@ -6,13 +6,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] protected float bulletSpeed;
     [SerializeField] protected Rigidbody2D BulletPrefab;
 
-    AudioManager audioPlayer;
     float timeSinceLastFire;
-
-    private void Awake()
-    {
-        audioPlayer = FindAnyObjectByType<AudioManager>();
-    }
 
     protected void Update()
     {
@@ -24,7 +18,7 @@ public class Shooting : MonoBehaviour
     }
     protected GameObject CreateBullet(float rotation)
     {
-        audioPlayer.PlayShootingClip();
+        AudioManager.Instance.PlayShootingClip();
         timeSinceLastFire = 0;
         Rigidbody2D bulletRB = Instantiate(BulletPrefab, transform.position, Quaternion.Euler(new Vector3(0,0,rotation)));
         bulletRB.linearVelocity = -bulletRB.transform.up * bulletSpeed;
