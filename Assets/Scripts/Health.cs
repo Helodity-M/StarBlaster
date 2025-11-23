@@ -3,7 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int health = 100;
-
+    [SerializeField] bool isPlayer = false;
     [SerializeField] bool useShakeEffect = false;
     [SerializeField] int scoreValue = 50;
     [SerializeField] ParticleSystem HitParticlePrefab;
@@ -50,6 +50,10 @@ public class Health : MonoBehaviour
         health -= amt;
         if (health <= 0)
         {
+            if (isPlayer)
+            {
+                FindFirstObjectByType<LevelManager>().LoadGameOver();
+            }
             scoreTracker.AddScore(scoreValue);
             Destroy(gameObject);
         }
