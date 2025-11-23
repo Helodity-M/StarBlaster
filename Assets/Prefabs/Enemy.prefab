@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620fc1bdc7ec026428d30377ea16a67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShooting
-  fireRate: 0.3
+  fireRate: 0.5
   bulletSpeed: 5
   BulletPrefab: {fileID: -5785711071189236101, guid: 207b51a46359ddb40864257944ffd3fd, type: 3}
 --- !u!114 &-4006193076150177543
@@ -216,3 +216,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   health: 10
+  useShakeEffect: 0
+  HitParticlePrefab: {fileID: 4493074302951900433, guid: f80d9cd3c3443644280e8b399c0f9503, type: 3}
