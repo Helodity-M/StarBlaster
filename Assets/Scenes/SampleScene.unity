@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score:\n200
+  m_text: 'Score: 200'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d812fbcce211de4d8e8d2cb78d960e4, type: 2}
   m_sharedMaterial: {fileID: -513241867555373372, guid: 6d812fbcce211de4d8e8d2cb78d960e4, type: 2}
@@ -1283,10 +1283,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64.85
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

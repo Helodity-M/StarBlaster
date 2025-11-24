@@ -18,7 +18,7 @@ public class UITracker : MonoBehaviour
     private void Update()
     {
         HealthUI.value = playerHealth.health;
-        ScoreUI.text = $"Score:\n{ScoreTracker.Instance.score}";
+        ScoreUI.text = $"Score: {ScoreTracker.Instance.score}";
     }
 
 
