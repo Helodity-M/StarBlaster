@@ -734,9 +734,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   waveList:
   - {fileID: 11400000, guid: 2688b71599fc77543a236b514ad58356, type: 2}
-  - {fileID: 11400000, guid: 2688b71599fc77543a236b514ad58356, type: 2}
+  - {fileID: 11400000, guid: e837484289deab649a70b09e2c67f4bc, type: 2}
+  - {fileID: 11400000, guid: 591710f195aabe146909db6c16ad4b16, type: 2}
   currentWaveIndex: 0
-  timeBetweenWaveSpawns: 10
+  timeBetweenWaveSpawns: 7
   isLooping: 1
 --- !u!4 &968335328
 Transform:
